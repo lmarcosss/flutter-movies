@@ -1,5 +1,7 @@
 import 'package:filme_flix/components/buttons/primary_button.dart';
 import 'package:filme_flix/components/buttons/secondary_button.dart';
+import 'package:filme_flix/login_page.dart';
+import 'package:filme_flix/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
@@ -20,7 +22,7 @@ class LandingPage extends StatelessWidget {
             ),
           ),
           Container(
-            height: size.height * 0.3,
+            height: size.height * 0.36,
             width: size.width,
             padding: const EdgeInsets.symmetric(vertical: 29, horizontal: 19),
             decoration: BoxDecoration(
@@ -47,11 +49,35 @@ class LandingPage extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     )),
                 PrimaryButton(
-                  onPressed: () {},
+                  padding: const EdgeInsets.only(
+                    left: 8,
+                    right: 8,
+                    top: 16,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      ),
+                    );
+                  },
                   text: "Login",
                 ),
                 SecondaryButton(
-                  onPressed: () {},
+                  padding: const EdgeInsets.only(
+                    left: 8,
+                    right: 8,
+                    top: 16,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPage(),
+                      ),
+                    );
+                  },
                   text: "Sign Up",
                 )
               ],
