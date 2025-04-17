@@ -1,4 +1,4 @@
-# flutter_movies
+# Filme Flix
 
 A new Flutter project.
 
